@@ -16,7 +16,7 @@ class CompressText(BaseModel):
     summary: str
 
 @app.post("/summarize/")
-async def summarize_text(response:SummarizeText):
+async def summarize_text(response:SummarizeText) -> dict:
     # Generate summary using the loaded model
     summary = summarizer(response.text, max_length=response.summary_length, do_sample=False)
     
@@ -27,6 +27,6 @@ async def summarize_text(response:SummarizeText):
     return {"summary": summarized_text}
 
 @app.post('/compress_summary/')
-async def compress_summary_endpoint(original_summary:CompressText):
+async def compress_summary_endpoint(original_summary:CompressText) -> dict:
     compressed_summary = compress_summary(original_summary.summary)
     return {'compressed_summary': compressed_summary}
