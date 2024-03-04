@@ -9,3 +9,6 @@ delete:
 	docker container stop ${CONTAINER_NAME}
 	docker container rm ${CONTAINER_NAME}
 
+logs:
+	docker logs ${CONTAINER_NAME}
+
