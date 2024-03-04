@@ -107,7 +107,8 @@ curl -X 'POST' \
 * Decrease build time of the docker image
 * Create a docker-composer.yaml file 
 * Integrate load testing using Locust to evaluate system performance
-* Integrate this into the cloud using Github CICD
+* Integrate this into AWS' container registry and kubernetes cluster using Github CICD
+* Set up monitoring with Cloudwatch or Datadog
 
 ## Contributors
 
